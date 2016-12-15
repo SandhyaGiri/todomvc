@@ -1,0 +1,11 @@
+<div w-bind>
+	<input type="text" placeholder="Enter a todo" w-onKeyDown="handleKeyPress"/>
+	<ul id="todo-list">
+		<li for(todoItem in data.todoItems | status-var=loop)>
+			<todo-item w-id="todoItems[]" title="${todoItem.title}" completed="${todoItem.completed}" index="${loop.getIndex()}"
+				w-onActivate="activateTodo"
+				w-onComplete="completeTodo"/>
+		</li>
+	</ul>
+	<label>Number of tasks left: ${data.todoItems.length - data.completed}</label>
+</div>

@@ -1,0 +1,8 @@
+{
+	"dependencies" : [
+		"require: jquery",
+		"require: marko-widgets",
+		"./style.css",
+		"require: ../../components/todo-list"
+	]
+}
